@@ -1,0 +1,356 @@
+{% load color %}
+
+
+<!DOCTYPE html>{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Инфляция в России</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    {% block content %}
+      <div class="row">
+        <h1 class="col s12">Инфляция в России</h1>
+        <div class="form-row text-center">
+            <table class="u-full-width">
+        <thead>
+        <tr>
+            <th>Год</th>
+            <th>Январь</th>
+            <th>Февраль</th>
+            <th>Март</th>
+            <th>Апрель</th>
+            <th>Май</th>
+            <th>Июнь</th>
+            <th>Июль</th>
+            <th>Август</th>
+            <th>Сентябрь</th>
+            <th>Октябрь</th>
+            <th>Ноябрь</th>
+            <th>Декабрь</th>
+            <th>Сумма</th>
+        </tr>
+        </thead>
+        <!-- Ваша логика -->
+                <tbody>
+      {% for element in month %}
+        <tr>
+          <td>{{ element.Year }}</td>
+          {% if element.January|is_digit >= 1 and element.January|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.January}}
+          </td>
+          {% endif %}
+          {% if element.January|is_digit > 2 and element.January|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.January}}
+          </td>
+          {% endif %}
+           {% if element.January|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.January}}
+          </td>
+          {% endif %}
+          {% if element.January|is_digit > 0 and element.January|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.January  }}
+          </td>
+          {% endif %}
+          {% if element.January|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.January }}
+          </td>
+          {% endif %}
+          {% if element.February|is_digit >= 1 and element.February|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.February }}
+          </td>
+          {% endif %}
+          {% if element.February|is_digit > 2 and element.February|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.February }}
+          </td>
+          {% endif %}
+           {% if element.February|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.February }}
+          </td>
+          {% endif %}
+          {% if element.February|is_digit > 0 and element.February|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.February  }}
+          </td>
+          {% endif %}
+          {% if element.February|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.February }}
+          </td>
+          {% endif %}
+          {% if element.March|is_digit >= 1 and element.March|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.March }}
+          </td>
+          {% endif %}
+          {% if element.March|is_digit > 2 and element.March|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.March }}
+          </td>
+          {% endif %}
+           {% if element.March|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.March}}
+          </td>
+          {% endif %}
+          {% if element.March|is_digit > 0 and element.March|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.March  }}
+          </td>
+          {% endif %}
+          {% if element.March|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.March }}
+          </td>
+          {% endif %}
+          {% if element.April|is_digit >= 1 and element.April|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.April }}
+          </td>
+          {% endif %}
+          {% if element.April|is_digit > 2 and element.April|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.April }}
+          </td>
+          {% endif %}
+           {% if element.April|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.April}}
+          </td>
+          {% endif %}
+          {% if element.April|is_digit > 0 and element.April|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.April }}
+          </td>
+          {% endif %}
+          {% if element.April|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.April}}
+          </td>
+          {% endif %}
+          {% if element.May|is_digit >= 1 and element.May|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.May  }}
+          </td>
+          {% endif %}
+          {% if element.May|is_digit > 2 and element.May|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.May  }}
+          </td>
+          {% endif %}
+           {% if element.May|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.May }}
+          </td>
+          {% endif %}
+          {% if element.May|is_digit > 0 and element.May|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.May }}
+          </td>
+          {% endif %}
+          {% if element.May|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.June }}
+          </td>
+          {% endif %}
+          {% if element.June|is_digit >= 1 and element.June|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.June   }}
+          </td>
+          {% endif %}
+          {% if element.June|is_digit > 2 and element.June|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.June   }}
+          </td>
+          {% endif %}
+           {% if element.June|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.June }}
+          </td>
+          {% endif %}
+          {% if element.June|is_digit > 0 and element.June|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.June  }}
+          </td>
+          {% endif %}
+          {% if element.June|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.June }}
+          </td>
+          {% endif %}
+          {% if element.July|is_digit >= 1 and element.July|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.July  }}
+          </td>
+          {% endif %}
+          {% if element.July|is_digit > 2 and element.July|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.July   }}
+          </td>
+          {% endif %}
+           {% if element.July|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.July }}
+          </td>
+          {% endif %}
+          {% if element.July|is_digit > 0 and element.July|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.July  }}
+          </td>
+          {% endif %}
+          {% if element.July|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.July }}
+          </td>
+          {% endif %}
+          {% if element.August|is_digit >= 1 and element.August|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.August  }}
+          </td>
+          {% endif %}
+          {% if element.August|is_digit > 2 and element.August|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.August  }}
+          </td>
+          {% endif %}
+           {% if element.August|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.August }}
+          </td>
+          {% endif %}
+          {% if element.August|is_digit >= 0 and element.August|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.August  }}
+          </td>
+          {% endif %}
+          {% if element.August|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.August }}
+          </td>
+          {% endif %}
+          {% if element.September|is_digit > 1 and element.September|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.September }}
+          </td>
+          {% endif %}
+          {% if element.September|is_digit > 2 and element.September|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.September }}
+          </td>
+          {% endif %}
+          {% if element.September|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.September }}
+          </td>
+          {% endif %}
+          {% if element.September|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.September }}
+          </td>
+          {% endif %}
+          {% if element.September|is_digit > 0 and element.September|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.September }}
+          </td>
+          {% endif %}
+          {% if element.October|is_digit >= 1 and element.October|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.October  }}
+          </td>
+          {% endif %}
+          {% if element.October|is_digit > 2 and element.October|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.October }}
+          </td>
+          {% endif %}
+           {% if element.October|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.October }}
+          </td>
+          {% endif %}
+          {% if element.October|is_digit >= 0 and element.October|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.October }}
+          </td>
+          {% endif %}
+          {% if element.October|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.October }}
+          </td>
+          {% endif %}
+          {% if element.November|is_digit >= 1 and element.November|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.November  }}
+          </td>
+          {% endif %}
+          {% if element.November|is_digit > 2 and element.November|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.November}}
+          </td>
+          {% endif %}
+           {% if element.November|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.November }}
+          </td>
+          {% endif %}
+          {% if element.November|is_digit >= 0 and element.November|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.November}}
+          </td>
+          {% endif %}
+          {% if element.November|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.November }}
+          </td>
+          {% endif %}
+          {% if element.December|is_digit >= 1 and element.December|is_digit < 2 %}
+          <td style="background-color: #F9DEDD">
+              {{ element.December  }}
+          </td>
+          {% endif %}
+          {% if element.December|is_digit > 2 and element.December|is_digit < 5 %}
+          <td style="background-color: #FB5652">
+              {{ element.December}}
+          </td>
+          {% endif %}
+           {% if element.December|is_digit > 5 %}
+          <td style="background-color: #D20400">
+              {{ element.December }}
+          </td>
+          {% endif %}
+          {% if element.December|is_digit >= 0 and element.December|is_digit < 1 %}
+          <td style="background-color: white">
+              {{ element.December}}
+          </td>
+          {% endif %}
+          {% if element.December|is_digit < 0 %}
+          <td style="background-color: #05F97A">
+              {{ element.December }}
+          </td>
+          {% endif %}
+          <td style="background-color: Gray">{{ element.Summ }}</td>
+      {% endfor %}
+      </tbody>
+            </table>
+        </div>
+      </div>
+    {% endblock %}
+
+  </body>
+</html>
