@@ -22,6 +22,7 @@ def function_csv2():
         empty_list = []
     return empty_list2
 
+
 def is_digit(string):
     if string.isdigit():
        return True
@@ -31,6 +32,7 @@ def is_digit(string):
             return True
         except ValueError:
             return False
+
 
 def dict_list():
     list_of_list = function_csv2()
@@ -55,4 +57,13 @@ def dict_list():
         moth_dict = {}
     return content
 
-print(dict_list())
+
+
+def function_csv33():
+    cont = []
+    with open('inflation_russia.csv', newline='', encoding='utf-8',) as csvfile:
+        reader = csv.DictReader(csvfile,delimiter=';')
+        for row in reader:
+            print(row)
+
+function_csv33()
